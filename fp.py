@@ -55,13 +55,13 @@ L1 = Tk.Label(root, textvariable = s1)
 comvalue_1=Tk.StringVar()#窗体自带的文本，新建一个值
 comvalue_1.set("sound")
 comboxlist_1=ttk.Combobox(root,textvariable=comvalue_1) #初始化
-comboxlist_1["values"]=("wood.wav","2","3","4")
+comboxlist_1["values"]=("wood.wav","AirHorn.wav","gunbattle.wav","PhoneRinging.wav","thunder.wav","triumphal.wav")
 comboxlist_1.bind("<<ComboboxSelected>>",set_sound_name)  #绑定事件,(下拉列表框被选中时，绑定go()函数)
 
 comvalue_2=Tk.StringVar()
 comvalue_2.set("effect")
 comboxlist_2=ttk.Combobox(root,textvariable=comvalue_2) #初始化
-comboxlist_2["values"]=("vibrato","echo","chorus","4")
+comboxlist_2["values"]=("vibrato","echo","chorus")
 comboxlist_2.bind("<<ComboboxSelected>>",set_effect)
 
 #构造窗体
