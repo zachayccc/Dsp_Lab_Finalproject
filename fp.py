@@ -5,9 +5,9 @@ import wave
 import struct
 import math
 from myfunctions import clip16
-import vibrato
-import echo
-import chorus
+from effect import echo
+from effect import vibrato
+from effect import chorus
 
 root = Tk.Tk()
 
