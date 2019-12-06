@@ -24,8 +24,8 @@ def set_effect(*args): #选择声效
 
 
 def run():
-	# s1.set("you are playing" + sound_name + "with" + effect_name )
-	wavfile = sound_name 
+	#s1.set("you are playing" + sound_name + "with" + effect_name )
+	wavfile = "music/" + sound_name 
 	# wavfile = 'author.wav'
 	# wavfile = 'cosine_200_hz.wav'
 
@@ -43,7 +43,7 @@ def run():
 		print(3)
 
 s1 = Tk.StringVar() 
-s1.set("sound_name") #设置歌曲名默认值
+s1.set("Please design your own sound effect") #设置歌曲名默认值
 
 
 B1 = Tk.Button(root, text = 'play the sound', command = run) # 开始运行歌曲
