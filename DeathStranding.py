@@ -8,7 +8,7 @@ from myfunctions import clip16
 from effect import echo
 from effect import vibrato
 from effect import chorus
-
+from effect import origin
 root = Tk.Tk()
 
 def set_sound_name(*args):   #获取音频文件名
@@ -32,6 +32,9 @@ def run():
 	print('Play the wave file: %s.' % wavfile)
 
 	# choose sound effect
+	if effect_name == "origin":
+		origin.origin(wavfile)
+
 	if effect_name == "vibrato":
 		vibrato.vibrato(wavfile)
 		print(1)
@@ -61,9 +64,10 @@ comboxlist_1.bind("<<ComboboxSelected>>",set_sound_name)  #绑定事件,(下拉�
 comvalue_2=Tk.StringVar()
 comvalue_2.set("effect")
 comboxlist_2=ttk.Combobox(root,textvariable=comvalue_2) #初始化
-comboxlist_2["values"]=("vibrato","echo","chorus")
+comboxlist_2["values"]=("origin","vibrato","echo","chorus")
 comboxlist_2.bind("<<ComboboxSelected>>",set_effect)
 
+effect_name = ""
 #构造窗体
 L1.pack() 
 B1.pack()
